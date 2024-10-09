@@ -1,8 +1,8 @@
 package com.rest.crud_api.repo;
 
-import com.rest.crud_api.model.User;
+import com.rest.crud_api.model.Item;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface UserRepo extends JpaRepository<User, Long> {
+public interface UserRepo extends JpaRepository<Item, Long> {
 
 }
