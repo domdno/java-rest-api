@@ -3,17 +3,14 @@ package com.rest.crud_api.model;
 import jakarta.persistence.*;
 
 @Entity
-public class User {
+public class Item {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column
-    private String firstName;
-
-    @Column
-    private String lastName;
+    private String itemName;
 
     @Column
     private String status;
@@ -26,20 +23,16 @@ public class User {
         this.id = id;
     }
 
+    public String getItemName() {
+        return itemName;
+    }
+
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
+    }
+
     public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+        return itemName;
     }
 
     public String getStatus() {
@@ -49,7 +42,5 @@ public class User {
     public void setStatus(String status) {
         this.status = status;
     }
-
-
 
 }
