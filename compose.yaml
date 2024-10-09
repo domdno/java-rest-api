@@ -1,0 +1,20 @@
+services:
+  postgres:
+    image: 'postgres:latest'
+    environment:
+      - 'POSTGRES_DB=user_db'
+      - 'POSTGRES_PASSWORD=password'
+      - 'POSTGRES_USER=admin'
+    ports:
+      - '15432:5432'
+
+  app:
+    build: .
+    environment:
+      - 'SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/user_db'
+      - 'SPRING_DATASOURCE_USERNAME=admin'
+      - 'SPRING_DATASOURCE_PASSWORD=password'
+    ports:
+      - '8080:8080'
+    depends_on:
+      - postgres
