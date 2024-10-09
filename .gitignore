@@ -31,3 +31,24 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Logs
+logs/
+*.log
+
+# Build
+target/
+build/
+
+# IntelliJ project files
+*.iml
+.idea/
+
+# Maven/Gradle
+/.mvn/
+/.gradle/
+/out/
+
+# OS Files
+.DS_Store
+Thumbs.db
