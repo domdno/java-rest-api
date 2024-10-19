@@ -6,7 +6,7 @@ services:
       - 'POSTGRES_PASSWORD=password'
       - 'POSTGRES_USER=admin'
     ports:
-      - '15432:5432'
+      - '5432:5432'
 
   app:
     build: .

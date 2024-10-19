@@ -31,9 +31,6 @@ public class Item {
         this.itemName = itemName;
     }
 
-    public String getFirstName() {
-        return itemName;
-    }
 
     public String getStatus() {
         return status;
