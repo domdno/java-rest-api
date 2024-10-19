@@ -3,6 +3,8 @@ package com.rest.crud_api.controller;
 import com.rest.crud_api.model.Item;
 import com.rest.crud_api.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -31,6 +33,6 @@ public class ApiController {
     @PostMapping("/api/items")
     public ResponseEntity<Item> saveItem(@RequestBody Item item){
         Item newItem = itemService.saveItem(item);
-        return ResponseEntity.ok(newItem);
+        return new ResponseEntity<Item>(newItem, HttpStatus.OK);
     }
 }
